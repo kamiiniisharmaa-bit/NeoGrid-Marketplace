@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>NeoGrid Marketplace | Terms of Service</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fafafc;
+      color: #1a2e26;
+      line-height: 1.5;
+    }
+
+    /* unique name: "AetherLegal" theme */
+    .legal-container {
+      max-width: 1000px;
+      margin: 2rem auto 4rem;
+      padding: 2rem 2rem 3rem;
+      background: white;
+      border-radius: 2rem;
+      box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.02);
+      border: 1px solid #eef2ec;
+    }
+
+    /* NEBULA NAV (consistent with homepage) */
+    .nebula-nav {
+      background: #ffffffdd;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 1px 2px rgba(0,0,0,0.03), 0 4px 12px rgba(0,0,0,0.02);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid #e9edf2;
+    }
+
+    .nav-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0.9rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: baseline;
+      gap: 0.3rem;
+    }
+
+    .brand-neo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #1b4d3e, #2d6a4f);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-grid {
+      font-size: 1.8rem;
+      font-weight: 500;
+      color: #2c3e2f;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      font-weight: 500;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #1f3b32;
+      transition: color 0.2s;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a:hover {
+      color: #2d6a4f;
+    }
+
+    .nav-icon {
+      background: #f0f2f5;
+      padding: 0.5rem 1rem;
+      border-radius: 60px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+    }
+
+    /* terms header (unique touch) */
+    .terms-header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+      border-bottom: 2px solid #e2ece4;
+      padding-bottom: 1.5rem;
+    }
+
+    .terms-header h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      background: linear-gradient(145deg, #1e4f3e, #2c6e49);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      margin-bottom: 0.5rem;
+    }
+
+    .last-updated {
+      color: #5e7a6d;
+      font-size: 0.85rem;
+      margin-top: 0.5rem;
+    }
+
+    /* legal sections */
+    .legal-section {
+      margin-bottom: 2rem;
+      scroll-margin-top: 90px;
+    }
+
+    .legal-section h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #1b4d3e;
+      margin-bottom: 1rem;
+      padding-left: 0rem;
+      border-left: 4px solid #2d6a4f;
+      padding-left: 0.8rem;
+    }
+
+    .legal-section h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin: 1.2rem 0 0.5rem;
+      color: #1e3b31;
+    }
+
+    .legal-section p, .legal-section li {
+      color: #2b4a3c;
+      margin-bottom: 0.75rem;
+      font-size: 0.96rem;
+    }
+
+    .legal-section ul, .legal-section ol {
+      margin: 0.8rem 0 1rem 1.8rem;
+    }
+
+    .legal-section li {
+      margin-bottom: 0.4rem;
+    }
+
+    .highlight-box {
+      background: #f4f9f1;
+      border-left: 4px solid #2d6a4f;
+      padding: 1rem 1.5rem;
+      border-radius: 1rem;
+      margin: 1.5rem 0;
+      font-size: 0.9rem;
+    }
+
+    hr {
+      margin: 2rem 0;
+      border: none;
+      height: 1px;
+      background: linear-gradient(to right, #e0e8e0, transparent);
+    }
+
+    /* footer consistency */
+    .stratos-footer {
+      background: #0f2a22;
+      color: #cfded7;
+      margin-top: 2rem;
+      padding: 3rem 2rem 2rem;
+    }
+
+    .footer-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .footer-col h4 {
+      color: white;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+
+    .footer-col p, .footer-col a {
+      color: #bcd0c5;
+      text-decoration: none;
+      font-size: 0.9rem;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .copyright {
+      text-align: center;
+      border-top: 1px solid #2c4e41;
+      padding-top: 2rem;
+      margin-top: 2rem;
+      font-size: 0.8rem;
+    }
+
+    .back-to-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #eef3ea;
+      padding: 0.5rem 1.2rem;
+      border-radius: 40px;
+      text-decoration: none;
+      color: #1c4d3c;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+      transition: 0.2s;
+    }
+
+    .back-to-home:hover {
+      background: #dfe8da;
+      transform: translateX(-3px);
+    }
+
+    @media (max-width: 680px) {
+      .legal-container {
+        margin: 1rem;
+        padding: 1.5rem;
+      }
+      .terms-header h1 { font-size: 1.8rem; }
+      .nav-container { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NEBULA NAVIGATION (same unique identity) -->
+<nav class="nebula-nav">
+  <div class="nav-container">
+    <div class="logo-area">
+      <span class="brand-neo">NeoGrid</span>
+      <span class="brand-grid">▲ Marketplace</span>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="about.html">About Us</a>
+      <a href="#" class="nav-icon">🛒 Cart (0)</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="legal-container">
+    <!-- subtle back link to homepage (simulated) -->
+    <a href="#" class="back-to-home" id="backToHomeLink">← Back to NeoGrid Home</a>
+    
+    <div class="terms-header">
+      <h1>Terms of Service</h1>
+      <div class="last-updated">📅 Last updated: June 12, 2026 | Version 2.3 — "Aether Pact"</div>
+      <p style="margin-top: 0.75rem; font-size: 0.9rem; max-width: 80%; margin-left: auto; margin-right: auto;">Welcome to NeoGrid Marketplace. By accessing or using our platform, you agree to be bound by these unique Terms.</p>
+    </div>
+
+    <!-- Legal sections with comprehensive clauses (unique but standard-compliant) -->
+    <div class="legal-section" id="acceptance">
+      <h2>1. Acceptance of the "Radial Terms"</h2>
+      <p>These Terms of Service (the "Agreement") constitute a legally binding agreement between you ("User", "Customer", or "You") and NeoGrid Marketplace ("Company", "we", "us", or "our"). By registering, browsing, or making a purchase on the NeoGrid ecosystem (including all subdomains and mobile views), you acknowledge that you have read, understood, and agree to be bound by this Agreement, our Privacy Policy, and any additional guidelines or future modifications.</p>
+      <div class="highlight-box">
+        ✨ <strong>Unique clause – Digital Civility:</strong> NeoGrid fosters a community of conscious commerce. Any abusive, fraudulent, or illegal activity will result in immediate termination of access and potential legal action.
+      </div>
+    </div>
+
+    <div class="legal-section" id="account">
+      <h2>2. Account Registration & Nebula Identity</h2>
+      <p>To access certain features, you may create an account using accurate, current, and complete information. You are solely responsible for safeguarding your login credentials and for any activity under your account. Notify us immediately of any breach. We reserve the right to suspend or delete accounts that remain inactive for over 12 months or violate any provision herein.</p>
+      <h3>Age restriction</h3>
+      <p>Our services are intended for individuals at least 18 years old. By using NeoGrid, you represent that you are of legal age to form a binding contract.</p>
+    </div>
+
+    <div class="legal-section" id="purchases">
+      <h2>3. Products, Pricing & "Eco-Origin" Descriptions</h2>
+      <p>We strive to display accurate product images, descriptions, and pricing. However, errors may occur. If a product is mispriced or misrepresented, we reserve the right to cancel or refuse orders. All prices are listed in USD, and applicable taxes or shipping fees are calculated at checkout. We collaborate with ethical suppliers, and any unique "sustainable" badges reflect third-party certifications—but we recommend reviewing individual product details.</p>
+      <ul>
+        <li><strong>Limited edition items:</strong> Some collections (e.g., Aether Drops) have limited stock; once sold out, they may not be restocked.</li>
+        <li><strong>Pre-orders:</strong> For pre-order items, estimated shipping dates are provided, but delays beyond our reasonable control are not grounds for refund unless stipulated.</li>
+      </ul>
+    </div>
+
+    <div class="legal-section" id="shipping-returns">
+      <h2>4. Shipping, Returns & "Orbit Guarantee"</h2>
+      <p>We offer worldwide shipping with standard and express options. Risk of loss passes to you upon delivery to the carrier. For returns: Most items are eligible for return within 30 days of delivery, provided they are unused and in original packaging. Certain final sale items (e.g., personalized goods) are non-returnable. To initiate a return, contact our support team. Refunds will be issued to the original payment method within 14 business days after inspection.</p>
+      <div class="highlight-box">
+        🌱 <strong>NeoGrid Carbon-Offset Promise:</strong> For every return, we offset shipping emissions — but we encourage thoughtful purchases to reduce waste.
+      </div>
+    </div>
+
+    <div class="legal-section" id="intellectual">
+      <h2>5. Intellectual Property & "Nebula Rights"</h2>
+      <p>All content on this site including text, graphics, logos, images, audio clips, digital downloads, and software is the property of NeoGrid Marketplace or its content suppliers and protected by international copyright laws. The unique compilation of all content is our exclusive property. You may not reproduce, distribute, display, or create derivative works without explicit written consent. "NeoGrid", "Aether collection", and associated marks are registered trademarks.</p>
+      <p>User-generated reviews and photos: By submitting feedback, you grant us a non-exclusive, royalty-free, perpetual license to use, modify, and display such content across our marketing channels.</p>
+    </div>
+
+    <div class="legal-section" id="prohibited">
+      <h2>6. Prohibited Conduct & "Radial Ethics"</h2>
+      <p>You agree not to:</p>
+      <ul>
+        <li>Use our platform for any unlawful purpose or to promote hate speech, harassment, or violence.</li>
+        <li>Attempt to reverse engineer, scrape, or disrupt our website’s functionality.</li>
+        <li>Make false claims about product availability or engage in fraudulent transactions.</li>
+        <li>Upload malicious code or interfere with other users’ experience.</li>
+      </ul>
+      <p>Violation may lead to immediate account suspension, forfeiture of pending rewards, and legal remedies.</p>
+    </div>
+
+    <div class="legal-section" id="disclaimers">
+      <h2>7. Disclaimer of Warranties</h2>
+      <p>THE NEOGRID MARKETPLACE IS PROVIDED "AS IS" AND "AS AVAILABLE". TO THE FULLEST EXTENT PERMITTED BY LAW, WE DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. WE DO NOT WARRANT THAT THE SERVICE WILL BE UNINTERRUPTED, SECURE, OR ERROR-FREE, OR THAT ANY DEFECTS WILL BE CORRECTED.</p>
+    </div>
+
+    <div class="legal-section" id="limitation">
+      <h2>8. Limitation of Liability</h2>
+      <p>IN NO EVENT SHALL NEOGRID MARKETPLACE, ITS DIRECTORS, EMPLOYEES, OR AFFILIATES BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING LOST PROFITS OR DATA, ARISING FROM YOUR USE OR INABILITY TO USE OUR SERVICES, EVEN IF ADVISED OF THE POSSIBILITY THEREOF. OUR TOTAL LIABILITY TO YOU SHALL NOT EXCEED THE AMOUNT YOU PAID TO US IN THE THREE (3) MONTHS PRECEDING THE CLAIM.</p>
+      <p>Some jurisdictions do not allow certain exclusions, so these limitations may not apply to you.</p>
+    </div>
+
+    <div class="legal-section" id="indemnification">
+      <h2>9. Indemnification</h2>
+      <p>You agree to indemnify, defend, and hold harmless NeoGrid Marketplace and our team from any claims, damages, losses, liabilities, costs, and expenses (including reasonable attorneys' fees) arising out of your breach of these Terms, your misuse of the site, or violation of any law or third-party rights.</p>
+    </div>
+
+    <div class="legal-section" id="governing-law">
+      <h2>10. Governing Law & Dispute Resolution</h2>
+      <p>These Terms shall be governed by and construed in accordance with the laws of the State of Delaware, without regard to its conflict of law principles. Any dispute arising from these Terms or your use of NeoGrid shall be resolved through binding arbitration in Wilmington, DE, in accordance with the rules of the American Arbitration Association. You waive any right to participate in a class action or class-wide arbitration.</p>
+    </div>
+
+    <div class="legal-section" id="modifications">
+      <h2>11. Modifications to Terms</h2>
+      <p>We may revise these Terms from time to time. The "Last updated" date will reflect changes. Continued use of the platform after any modifications constitutes acceptance of the updated Terms. Material changes will be notified via email or prominent notice on our website.</p>
+    </div>
+
+    <div class="legal-section" id="contact">
+      <h2>12. Contact Information</h2>
+      <p>For any questions regarding these Terms, please reach out to our Legal Orbits team:</p>
+      <p>✉️ Email: legal@neogrid.market<br>
+      📬 Address: NeoGrid Legal Dept., 3100 Aether Lane, Suite 204, Wilmington, DE 19801, USA<br>
+      📞 Support line (Terms only): +1 (302) 555-0142</p>
+    </div>
+
+    <hr>
+
+    <div class="highlight-box" style="background: #e7f0ea; text-align: center;">
+      ⚖️ By continuing to use NeoGrid Marketplace, you acknowledge that you have read, understood, and agreed to this legally binding agreement. We encourage you to print or save a copy for your records.
+    </div>
+    <p style="text-align: center; margin-top: 1rem; font-size: 0.85rem;">Last Amended: June 12, 2026 — “Radial Clarity Update”</p>
+  </div>
+</main>
+
+<!-- STRATOS FOOTER (cohesive brand) -->
+<footer class="stratos-footer">
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4>NeoGrid Marketplace</h4>
+      <p>Conscious design for modern life</p>
+      <p>📍 Brooklyn, NY / Berlin</p>
+    </div>
+    <div class="footer-col">
+      
+  </div>
+  <div class="copyright">
+    © 2026 NeoGrid Marketplace — designed with intent. All concepts unique. | <a href="#" style="color:#bcd0c5; text-decoration: underline;">Terms of Service</a>
+  </div>
+</footer>
+
+<!-- simple interaction script for back to home simulation & cart preview (optional) -->
+<script>
+  (function() {
+    // back button simulation: custom alert that explains navigation (since it's a static demo)
+    const backLink = document.getElementById('backToHomeLink');
+    if (backLink) {
+      backLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        // because we are on a terms page, we show a subtle overlay that would simulate returning
+        const toast = document.createElement('div');
+        toast.innerText = '↻ Redirecting to NeoGrid Homepage... (demo navigation)';
+        toast.style.position = 'fixed';
+        toast.style.bottom = '30px';
+        toast.style.left = '20px';
+        toast.style.backgroundColor = '#1e4a3b';
+        toast.style.color = 'white';
+        toast.style.padding = '10px 20px';
+        toast.style.borderRadius = '40px';
+        toast.style.fontSize = '0.85rem';
+        toast.style.fontWeight = '500';
+        toast.style.zIndex = '2000';
+        toast.style.boxShadow = '0 6px 16px rgba(0,0,0,0.1)';
+        document.body.appendChild(toast);
+        setTimeout(() => {
+          toast.style.opacity = '0';
+          setTimeout(() => toast.remove(), 300);
+          // optionally update location if it were a real site - but we keep demo safe.
+          window.location.href = '#'; // stays on same page without reload, just as demonstration.
+          // alternative: can scroll to top and show a snackbar
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }, 1200);
+      });
+    }
+    
+    // cart counter simulation (consistent with homepage demo but minimal)
+    let cartCount = 0;
+    const cartNav = document.querySelector('.nav-icon');
+    if (cartNav) {
+      cartNav.addEventListener('click', (e) => {
+        e.preventDefault();
+        cartCount += 1;
+        cartNav.innerHTML = `🛒 Cart (${cartCount})`;
+        const miniToast = document.createElement('div');
+        miniToast.innerText = '🛍️ Demo: item added to bag (simulated from Terms page)';
+        miniToast.style.position = 'fixed';
+        miniToast.style.bottom = '70px';
+        miniToast.style.right = '24px';
+        miniToast.style.backgroundColor = '#2d6a4f';
+        miniToast.style.color = 'white';
+        miniToast.style.padding = '8px 18px';
+        miniToast.style.borderRadius = '60px';
+        miniToast.style.fontSize = '0.8rem';
+        miniToast.style.zIndex = '1000';
+        document.body.appendChild(miniToast);
+        setTimeout(() => miniToast.remove(), 1800);
+      });
+    }
+  })();
+</script>
+</body>
+</html>

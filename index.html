@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>NeoGrid Marketplace | Modern E‑commerce</title>
+  <!-- Google Fonts + simple CSS reset -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fafafc;
+      color: #11181c;
+      line-height: 1.4;
+    }
+
+    /* unique container & smooth scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* custom focus ring for accessibility */
+    :focus-visible {
+      outline: 2px solid #2d6a4f;
+      outline-offset: 2px;
+    }
+
+    /* ========== NAVIGATION (unique name: "NebulaNav") ========== */
+    .nebula-nav {
+      background: #ffffffdd;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 1px 2px rgba(0,0,0,0.03), 0 4px 12px rgba(0,0,0,0.02);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid #e9edf2;
+    }
+
+    .nav-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0.9rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: baseline;
+      gap: 0.3rem;
+    }
+
+    .brand-neo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #1b4d3e, #2d6a4f);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-grid {
+      font-size: 1.8rem;
+      font-weight: 500;
+      color: #2c3e2f;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      font-weight: 500;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #1f3b32;
+      transition: color 0.2s;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a:hover {
+      color: #2d6a4f;
+    }
+
+    .nav-icon {
+      background: #f0f2f5;
+      padding: 0.5rem 1rem;
+      border-radius: 60px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+    }
+
+    /* HERO SECTION (unique name: "AetherHero") */
+    .aether-hero {
+      max-width: 1280px;
+      margin: 2rem auto 1rem;
+      padding: 0 2rem;
+    }
+
+    .hero-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      background: linear-gradient(105deg, #f6f9f4 0%, #ffffff 100%);
+      border-radius: 2.5rem;
+      overflow: hidden;
+      box-shadow: 0 12px 28px -8px rgba(0, 32, 16, 0.08);
+    }
+
+    .hero-content {
+      flex: 1.2;
+      padding: 3rem 2rem 3rem 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .hero-badge {
+      background: #e6f4ea;
+      color: #2c6e49;
+      display: inline-block;
+      width: fit-content;
+      padding: 0.3rem 1rem;
+      border-radius: 60px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-content h1 {
+      font-size: 3.2rem;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      color: #0b2b26;
+      margin-bottom: 1rem;
+    }
+
+    .hero-content p {
+      font-size: 1.1rem;
+      color: #3e5c51;
+      margin-bottom: 2rem;
+      max-width: 90%;
+    }
+
+    .cta-button {
+      background: #1e4a3b;
+      border: none;
+      padding: 0.9rem 2rem;
+      border-radius: 60px;
+      font-weight: 600;
+      font-size: 1rem;
+      color: white;
+      cursor: pointer;
+      transition: all 0.25s;
+      width: fit-content;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .cta-button:hover {
+      background: #0f3a2e;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px -5px rgba(30,74,59,0.3);
+    }
+
+    .hero-image {
+      flex: 1;
+      min-height: 320px;
+      background: #e4e9e2;
+      position: relative;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* FEATURED CATEGORIES (unique: "OrbitCategories") */
+    .orbit-categories {
+      max-width: 1280px;
+      margin: 4rem auto;
+      padding: 0 2rem;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .section-header h2 {
+      font-size: 1.9rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      color: #1e2f2a;
+    }
+
+    .section-link {
+      color: #2d6a4f;
+      font-weight: 500;
+      text-decoration: none;
+      border-bottom: 1px dashed #b7cfc2;
+    }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1.8rem;
+    }
+
+    .cat-card {
+      background: white;
+      border-radius: 1.8rem;
+      padding: 1.6rem 1rem;
+      text-align: center;
+      transition: all 0.2s ease;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+      border: 1px solid #edf2ee;
+      cursor: pointer;
+    }
+
+    .cat-card:hover {
+      transform: translateY(-5px);
+      border-color: #cfe3d6;
+      box-shadow: 0 20px 25px -12px rgba(0, 0, 0, 0.08);
+    }
+
+    .cat-img {
+      width: 80px;
+      height: 80px;
+      background: #eef3ec;
+      border-radius: 100%;
+      margin: 0 auto 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .cat-img img {
+      width: 55px;
+      height: 55px;
+      object-fit: cover;
+    }
+
+    .cat-card h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+
+    /* FEATURED PRODUCTS (unique name: "RadialShowcase") */
+    .radial-showcase {
+      max-width: 1280px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 2rem;
+      margin-top: 1.5rem;
+    }
+
+    .product-card {
+      background: #ffffff;
+      border-radius: 1.5rem;
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.02);
+      border: 1px solid #edf2ef;
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.12);
+      border-color: #d4e2d9;
+    }
+
+    .product-img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      background: #f1f5f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .product-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: scale 0.3s ease;
+    }
+
+    .product-card:hover .product-img img {
+      scale: 1.03;
+    }
+
+    .product-info {
+      padding: 1.2rem 1rem 1.4rem;
+    }
+
+    .product-title {
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .product-price {
+      font-weight: 700;
+      color: #1e4a3b;
+      font-size: 1.2rem;
+      margin: 0.5rem 0 0.8rem;
+    }
+
+    .add-to-cart {
+      background: #f0f4ef;
+      border: none;
+      width: 100%;
+      padding: 0.6rem;
+      border-radius: 40px;
+      font-weight: 500;
+      color: #1c4d3c;
+      cursor: pointer;
+      transition: 0.2s;
+      font-size: 0.85rem;
+    }
+
+    .add-to-cart:hover {
+      background: #1e4a3b;
+      color: white;
+    }
+
+    /* TESTIMONIALS (unique: "EchoTrust") */
+    .echo-trust {
+      background: #eef3ea;
+      margin: 4rem auto;
+      border-radius: 2rem;
+      max-width: 1280px;
+      padding: 2.5rem 2rem;
+    }
+
+    .trust-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+
+    .review-card {
+      background: white;
+      border-radius: 1.5rem;
+      padding: 1.6rem;
+      flex: 1;
+      min-width: 240px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    }
+
+    .review-text {
+      font-style: italic;
+      color: #2f4d3e;
+      margin-bottom: 1rem;
+    }
+
+    .reviewer {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .avatar {
+      width: 42px;
+      height: 42px;
+      background: #cde0d4;
+      border-radius: 100%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: #2a5943;
+    }
+
+    /* FOOTER (unique: "StratosFooter") */
+    .stratos-footer {
+      background: #0f2a22;
+      color: #cfded7;
+      margin-top: 4rem;
+      padding: 3rem 2rem 2rem;
+    }
+
+    .footer-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .footer-col h4 {
+      color: white;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+
+    .footer-col p, .footer-col a {
+      color: #bcd0c5;
+      text-decoration: none;
+      font-size: 0.9rem;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .copyright {
+      text-align: center;
+      border-top: 1px solid #2c4e41;
+      padding-top: 2rem;
+      margin-top: 2rem;
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 720px) {
+      .hero-content h1 { font-size: 2.3rem; }
+      .hero-content p { max-width: 100%; }
+      .hero-content { padding: 2rem; }
+      .nav-container { flex-direction: column; align-items: flex-start; }
+      .nav-links { flex-wrap: wrap; gap: 1rem; }
+    }
+  </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NTV0NLN2X5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-NTV0NLN2X5');
+</script>
+</head>
+<body>
+
+<!-- NEBULA NAVIGATION (unique name) -->
+<nav class="nebula-nav">
+  <div class="nav-container">
+    <div class="logo-area">
+      <span class="brand-neo">NeoGrid</span>
+      <span class="brand-grid">▲ Marketplace</span>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="about.html">About Us</a>
+      <a href="#" class="nav-icon">🛒 Cart (0)</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <!-- AETHER HERO (unique) with embedded image -->
+  <div class="aether-hero">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <span class="hero-badge">✨ limited autumn drop</span>
+        <h1>Where design meets<br>sustainable living</h1>
+        <p>Curated furniture, smart gadgets, and organic textiles — each piece tells a story. Free shipping on orders over $75.</p>
+        <button class="cta-button" id="shopNowBtn">Explore collection →</button>
+      </div>
+      <div class="hero-image">
+        <!-- high-quality placeholder image (modern ecom hero) -->
+        <img src="https://placecats.com/neo/800/600?random=1" alt="modern interior with minimalist furniture" 
+             onerror="this.onerror=null; this.src='https://picsum.photos/id/20/800/600';">
+      </div>
+    </div>
+  </div>
+
+  <!-- ORBIT CATEGORIES (unique) with images -->
+  <div class="orbit-categories">
+    <div class="section-header">
+      <h2>Shop by vibe</h2>
+      <a href="#" class="section-link">View all →</a>
+    </div>
+    <div class="category-grid">
+      <div class="cat-card">
+        <div class="cat-img"><img src="https://picsum.photos/id/106/100/100?grayscale" alt="Furniture icon" loading="lazy"></div>
+        <h3>Furniture</h3>
+        <span style="font-size: 0.8rem;">52 items</span>
+      </div>
+      <div class="cat-card">
+        <div class="cat-img"><img src="https://picsum.photos/id/20/100/100" alt="Lighting icon" loading="lazy"></div>
+        <h3>Lighting</h3>
+        <span style="font-size: 0.8rem;">24 items</span>
+      </div>
+      <div class="cat-card">
+        <div class="cat-img"><img src="https://picsum.photos/id/30/100/100" alt="Decor" loading="lazy"></div>
+        <h3>Decor</h3>
+        <span style="font-size: 0.8rem;">38 items</span>
+      </div>
+      <div class="cat-card">
+        <div class="cat-img"><img src="https://picsum.photos/id/1/100/100" alt="Tech" loading="lazy"></div>
+        <h3>Smart Tech</h3>
+        <span style="font-size: 0.8rem;">19 items</span>
+      </div>
+      <div class="cat-card">
+        <div class="cat-img"><img src="https://picsum.photos/id/127/100/100" alt="Textiles" loading="lazy"></div>
+        <h3>Textiles</h3>
+        <span style="font-size: 0.8rem;">27 items</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- RADIAL SHOWCASE - featured products with unique images -->
+  <div class="radial-showcase">
+    <div class="section-header">
+      <h2>⭐ Editor's picks</h2>
+      <a href="#" class="section-link">See all →</a>
+    </div>
+    <div class="product-grid" id="featuredGrid">
+      <!-- product 1 -->
+      <div class="product-card">
+        <div class="product-img"><img src="https://picsum.photos/id/58/400/400" alt="Velvet armchair" loading="lazy"></div>
+        <div class="product-info">
+          <div class="product-title">Aether lounge chair</div>
+          <div class="product-price">$349</div>
+          <button class="add-to-cart" data-name="Aether lounge chair" data-price="349">Add to bag</button>
+        </div>
+      </div>
+      <!-- product 2 -->
+      <div class="product-card">
+        <div class="product-img"><img src="https://picsum.photos/id/26/400/400" alt="Ceramic lamp" loading="lazy"></div>
+        <div class="product-info">
+          <div class="product-title">Nebula arc lamp</div>
+          <div class="product-price">$189</div>
+          <button class="add-to-cart" data-name="Nebula arc lamp" data-price="189">Add to bag</button>
+        </div>
+      </div>
+      <!-- product 3 -->
+      <div class="product-card">
+        <div class="product-img"><img src="https://picsum.photos/id/113/400/400" alt="Minimalist desk" loading="lazy"></div>
+        <div class="product-info">
+          <div class="product-title">Grid work desk</div>
+          <div class="product-price">$499</div>
+          <button class="add-to-cart" data-name="Grid work desk" data-price="499">Add to bag</button>
+        </div>
+      </div>
+      <!-- product 4 -->
+      <div class="product-card">
+        <div class="product-img"><img src="https://picsum.photos/id/96/400/400" alt="Organic cotton rug" loading="lazy"></div>
+        <div class="product-info">
+          <div class="product-title">Terazzo wool rug</div>
+          <div class="product-price">$129</div>
+          <button class="add-to-cart" data-name="Terazzo wool rug" data-price="129">Add to bag</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ECHO TRUST section with social proof and image avatars -->
+  <div class="echo-trust">
+    <div class="section-header" style="margin-bottom: 1rem;">
+      <h2>❤️ loved by 2k+ customers</h2>
+    </div>
+    <div class="trust-grid">
+      <div class="review-card">
+        <div class="review-text">“NeoGrid completely transformed my home office — the quality is unmatched and delivery was lightning fast.”</div>
+        <div class="reviewer"><span class="avatar">JD</span> <span>Jamie Duarte</span></div>
+      </div>
+      <div class="review-card">
+        <div class="review-text">“Sustainable AND gorgeous. The bamboo desk is my favorite piece, and the customer service is top-tier.”</div>
+        <div class="reviewer"><span class="avatar">MK</span> <span>Maya Krish</span></div>
+      </div>
+      <div class="review-card">
+        <div class="review-text">“Finally a store that combines modern aesthetics with eco-friendly materials. Highly recommend the lighting collection!”</div>
+        <div class="reviewer"><span class="avatar">TR</span> <span>Tomas Rivera</span></div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- STRATOS FOOTER -->
+<footer class="stratos-footer">
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4>NeoGrid Marketplace</h4>
+      <p>Conscious design for modern life</p>
+      <p>📍 Brooklyn, NY / Berlin</p>
+    </div>
+    <div class="footer-col">
+      
+  </div>
+  <div class="copyright">
+    © 2026 NeoGrid Marketplace — designed with intent. All concepts unique.
+  </div>
+</footer>
+
+<!-- minimal JS for interactive cart simulation & smooth alert (unique name: "CartOrbit") -->
+<script>
+  (function() {
+    // Cart state for demo alert (unique experience)
+    let cartItems = [];
+    
+    function updateCartBadge() {
+      const cartIcon = document.querySelector('.nav-icon');
+      if (cartIcon) {
+        const totalCount = cartItems.reduce((acc, item) => acc + item.quantity, 0);
+        cartIcon.innerHTML = `🛒 Cart (${totalCount})`;
+      }
+    }
+    
+    function addToCart(productName, price) {
+      const existingItem = cartItems.find(item => item.name === productName);
+      if (existingItem) {
+        existingItem.quantity += 1;
+      } else {
+        cartItems.push({ name: productName, price: price, quantity: 1 });
+      }
+      updateCartBadge();
+      // show temporary micro-interaction toast using custom alert (non intrusive)
+      const toastMsg = `✨ Added "${productName}" to your bag. Total items: ${cartItems.reduce((s,i)=> s+i.quantity,0)}`;
+      const toast = document.createElement('div');
+      toast.innerText = toastMsg;
+      toast.style.position = 'fixed';
+      toast.style.bottom = '24px';
+      toast.style.left = '50%';
+      toast.style.transform = 'translateX(-50%)';
+      toast.style.backgroundColor = '#1e4a3b';
+      toast.style.color = '#fff';
+      toast.style.padding = '12px 24px';
+      toast.style.borderRadius = '60px';
+      toast.style.fontWeight = '500';
+      toast.style.fontSize = '0.9rem';
+      toast.style.zIndex = '999';
+      toast.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
+      toast.style.backdropFilter = 'blur(4px)';
+      document.body.appendChild(toast);
+      setTimeout(() => { toast.style.opacity = '0'; setTimeout(() => toast.remove(), 300); }, 2000);
+    }
+    
+    // attach event listeners to all "Add to cart" buttons
+    document.querySelectorAll('.add-to-cart').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const name = btn.getAttribute('data-name');
+        const price = parseInt(btn.getAttribute('data-price'), 10);
+        if (name && price) addToCart(name, price);
+        else addToCart('item', 0);
+      });
+    });
+    
+    // shop now CTA scrolls to featured products & playful effect
+    const shopBtn = document.getElementById('shopNowBtn');
+    if (shopBtn) {
+      shopBtn.addEventListener('click', () => {
+        const showcase = document.querySelector('.radial-showcase');
+        if (showcase) {
+          showcase.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          // add temporary highlight effect
+          showcase.style.transition = 'box-shadow 0.3s';
+          showcase.style.boxShadow = '0 0 0 3px #cbe5da, 0 12px 28px rgba(0,0,0,0.08)';
+          setTimeout(() => { showcase.style.boxShadow = ''; }, 1000);
+        } else {
+          window.scrollTo({ top: document.body.scrollHeight * 0.4, behavior: 'smooth' });
+        }
+      });
+    }
+    
+    // simple category cards feedback (open modal or log, but unique interactive)
+    const catCards = document.querySelectorAll('.cat-card');
+    catCards.forEach(card => {
+      card.addEventListener('click', () => {
+        const categoryName = card.querySelector('h3')?.innerText || 'category';
+        const infoDiv = document.createElement('div');
+        infoDiv.innerText = `🔍 Exploring ${categoryName} — unique finds await!`;
+        infoDiv.style.position = 'fixed';
+        infoDiv.style.bottom = '80px';
+        infoDiv.style.left = '24px';
+        infoDiv.style.backgroundColor = '#ffffffdd';
+        infoDiv.style.backdropFilter = 'blur(8px)';
+        infoDiv.style.padding = '8px 18px';
+        infoDiv.style.borderRadius = '40px';
+        infoDiv.style.fontSize = '0.8rem';
+        infoDiv.style.fontWeight = '500';
+        infoDiv.style.border = '1px solid #cfe2d6';
+        infoDiv.style.color = '#1f4d3a';
+        infoDiv.style.zIndex = '1000';
+        document.body.appendChild(infoDiv);
+        setTimeout(() => infoDiv.remove(), 1500);
+      });
+    });
+    
+    // extra:  dynamically handle hero image fallback for unique styling. Placeholders are reliable but we also ensure.
+    const heroImg = document.querySelector('.hero-image img');
+    if (heroImg && heroImg.complete && heroImg.naturalWidth === 0) {
+      heroImg.src = 'https://picsum.photos/id/15/800/600';
+    }
+  })();
+</script>
+</body>
+</html>

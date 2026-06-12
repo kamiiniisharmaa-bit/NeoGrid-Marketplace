@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>NeoGrid Marketplace | Privacy Policy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fafafc;
+      color: #1a2e26;
+      line-height: 1.5;
+    }
+
+    /* unique name: "LuminaLegal" theme for privacy */
+    .privacy-container {
+      max-width: 1000px;
+      margin: 2rem auto 4rem;
+      padding: 2rem 2rem 3rem;
+      background: white;
+      border-radius: 2rem;
+      box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.02);
+      border: 1px solid #eef2ec;
+    }
+
+    /* NEBULA NAV (consistent with homepage) */
+    .nebula-nav {
+      background: #ffffffdd;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 1px 2px rgba(0,0,0,0.03), 0 4px 12px rgba(0,0,0,0.02);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid #e9edf2;
+    }
+
+    .nav-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0.9rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: baseline;
+      gap: 0.3rem;
+    }
+
+    .brand-neo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #1b4d3e, #2d6a4f);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-grid {
+      font-size: 1.8rem;
+      font-weight: 500;
+      color: #2c3e2f;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      font-weight: 500;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #1f3b32;
+      transition: color 0.2s;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a:hover {
+      color: #2d6a4f;
+    }
+
+    .nav-icon {
+      background: #f0f2f5;
+      padding: 0.5rem 1rem;
+      border-radius: 60px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+    }
+
+    /* privacy header */
+    .privacy-header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+      border-bottom: 2px solid #e2ece4;
+      padding-bottom: 1.5rem;
+    }
+
+    .privacy-header h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      background: linear-gradient(145deg, #1e4f3e, #2c6e49);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      margin-bottom: 0.5rem;
+    }
+
+    .last-updated {
+      color: #5e7a6d;
+      font-size: 0.85rem;
+      margin-top: 0.5rem;
+    }
+
+    /* legal sections */
+    .privacy-section {
+      margin-bottom: 2rem;
+      scroll-margin-top: 90px;
+    }
+
+    .privacy-section h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #1b4d3e;
+      margin-bottom: 1rem;
+      border-left: 4px solid #2d6a4f;
+      padding-left: 0.8rem;
+    }
+
+    .privacy-section h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin: 1.2rem 0 0.5rem;
+      color: #1e3b31;
+    }
+
+    .privacy-section p, .privacy-section li {
+      color: #2b4a3c;
+      margin-bottom: 0.75rem;
+      font-size: 0.96rem;
+    }
+
+    .privacy-section ul, .privacy-section ol {
+      margin: 0.8rem 0 1rem 1.8rem;
+    }
+
+    .privacy-section li {
+      margin-bottom: 0.4rem;
+    }
+
+    .highlight-box {
+      background: #f4f9f1;
+      border-left: 4px solid #2d6a4f;
+      padding: 1rem 1.5rem;
+      border-radius: 1rem;
+      margin: 1.5rem 0;
+      font-size: 0.9rem;
+    }
+
+    .data-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+
+    .data-card {
+      background: #f9fbf7;
+      border-radius: 1rem;
+      padding: 1rem;
+      flex: 1;
+      min-width: 180px;
+      border: 1px solid #e2e9e2;
+    }
+
+    hr {
+      margin: 2rem 0;
+      border: none;
+      height: 1px;
+      background: linear-gradient(to right, #e0e8e0, transparent);
+    }
+
+    /* footer consistency */
+    .stratos-footer {
+      background: #0f2a22;
+      color: #cfded7;
+      margin-top: 2rem;
+      padding: 3rem 2rem 2rem;
+    }
+
+    .footer-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .footer-col h4 {
+      color: white;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+
+    .footer-col p, .footer-col a {
+      color: #bcd0c5;
+      text-decoration: none;
+      font-size: 0.9rem;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .copyright {
+      text-align: center;
+      border-top: 1px solid #2c4e41;
+      padding-top: 2rem;
+      margin-top: 2rem;
+      font-size: 0.8rem;
+    }
+
+    .back-to-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #eef3ea;
+      padding: 0.5rem 1.2rem;
+      border-radius: 40px;
+      text-decoration: none;
+      color: #1c4d3c;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+      transition: 0.2s;
+    }
+
+    .back-to-home:hover {
+      background: #dfe8da;
+      transform: translateX(-3px);
+    }
+
+    @media (max-width: 680px) {
+      .privacy-container {
+        margin: 1rem;
+        padding: 1.5rem;
+      }
+      .privacy-header h1 { font-size: 1.8rem; }
+      .nav-container { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NEBULA NAVIGATION (same unique identity) -->
+<nav class="nebula-nav">
+  <div class="nav-container">
+    <div class="logo-area">
+      <span class="brand-neo">NeoGrid</span>
+      <span class="brand-grid">▲ Marketplace</span>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="about.html">About Us</a>
+      <a href="#" class="nav-icon">🛒 Cart (0)</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="privacy-container">
+    <!-- subtle back link to homepage (simulated) -->
+    <a href="#" class="back-to-home" id="backToHomeLink">← Back to NeoGrid Home</a>
+    
+    <div class="privacy-header">
+      <h1>Privacy Policy</h1>
+      <div class="last-updated">🔒 Last updated: June 12, 2026 | Version 2.0 — "Radial Transparency"</div>
+      <p style="margin-top: 0.75rem; font-size: 0.9rem; max-width: 80%; margin-left: auto; margin-right: auto;">At NeoGrid Marketplace, your privacy is at the core of our orbit. This policy explains how we collect, use, and protect your personal data.</p>
+    </div>
+
+    <!-- comprehensive privacy sections with unique naming -->
+    <div class="privacy-section" id="intro">
+      <h2>1. Introduction & Scope</h2>
+      <p>NeoGrid Marketplace ("we", "us", "our") respects your privacy and is committed to protecting your personal data. This privacy policy describes our practices regarding the collection, storage, usage, disclosure, and security of information when you visit our website, make a purchase, or interact with our services (collectively, the "Platform"). This policy applies to all users, including visitors, registered customers, and contributors.</p>
+      <div class="highlight-box">
+        🌿 <strong>The "Aether Pledge":</strong> We only collect data that helps us improve your experience, and we never sell your personal information to third parties for their marketing purposes.
+      </div>
+    </div>
+
+    <div class="privacy-section" id="data-collection">
+      <h2>2. Information We Collect</h2>
+      <p>To provide a seamless shopping experience, we may collect the following categories of personal data:</p>
+      <div class="data-grid">
+        <div class="data-card">
+          <strong>📝 Identity Data</strong><br>Name, username, date of birth (optional), and profile preferences.
+        </div>
+        <div class="data-card">
+          <strong>📬 Contact Data</strong><br>Email address, shipping/billing addresses, phone number.
+        </div>
+        <div class="data-card">
+          <strong>💳 Transaction Data</strong><br>Purchase history, payment method details (tokenized via secure PCI providers).
+        </div>
+        <div class="data-card">
+          <strong>🌐 Technical Data</strong><br>IP address, browser type, device identifiers, cookies, and browsing behavior.
+        </div>
+      </div>
+      <h3>Special categories (sensitive data)</h3>
+      <p>We do not knowingly collect sensitive information such as health data, political opinions, or biometric data. If you voluntarily provide such details (e.g., in product reviews), you consent to its limited processing as described.</p>
+    </div>
+
+    <div class="privacy-section" id="how-we-use">
+      <h2>3. How We Use Your Information</h2>
+      <p>Your personal data is used only for legitimate business purposes, including:</p>
+      <ul>
+        <li><strong>Order fulfillment:</strong> Processing payments, shipping products, and providing order updates.</li>
+        <li><strong>Account management:</strong> Creating and maintaining your NeoGrid profile, wishlists, and reward programs.</li>
+        <li><strong>Customer support:</strong> Responding to inquiries, returns, and technical issues.</li>
+        <li><strong>Marketing & personalization (opt-in):</strong> Sending tailored offers, new collection alerts, and site recommendations. You can unsubscribe at any time.</li>
+        <li><strong>Security & fraud prevention:</strong> Monitoring suspicious activities and ensuring platform integrity.</li>
+        <li><strong>Legal compliance:</strong> Fulfilling tax, regulatory, or law enforcement requests.</li>
+      </ul>
+    </div>
+
+    <div class="privacy-section" id="legal-basis">
+      <h2>4. Legal Basis for Processing (GDPR & CCPA Alignment)</h2>
+      <p>We process your data under the following legal bases:</p>
+      <ul>
+        <li><strong>Contractual necessity:</strong> To fulfill purchases and provide requested services.</li>
+        <li><strong>Legitimate interests:</strong> Improving our platform, fraud detection, and direct marketing (with opt-out).</li>
+        <li><strong>Consent:</strong> For optional communications and cookie tracking where required.</li>
+        <li><strong>Legal obligation:</strong> To comply with applicable laws and tax regulations.</li>
+      </ul>
+      <p>If you are a California resident, you have the right to opt-out of the "sale" of your personal information. NeoGrid does not sell your data; however, you may exercise your CCPA rights via the contact section below.</p>
+    </div>
+
+    <div class="privacy-section" id="cookies">
+      <h2>5. Cookies & Similar Technologies ("NebulaTrace")</h2>
+      <p>We use cookies, web beacons, and local storage to enhance functionality, analyze traffic, and personalize content. You can manage cookie preferences through our consent manager or your browser settings. Essential cookies cannot be disabled as they enable core features (e.g., cart, checkout). For detailed information, refer to our Cookie Preferences tool available on the site.</p>
+      <div class="highlight-box">
+        🍪 <strong>Third-party cookies:</strong> We use analytics partners (e.g., privacy-friendly analytics) and payment processors who set their own cookies. These are governed by their respective policies.
+      </div>
+    </div>
+
+    <div class="privacy-section" id="data-sharing">
+      <h2>6. Sharing & Disclosure</h2>
+      <p>We never sell your personal data. However, we may share information with:</p>
+      <ul>
+        <li><strong>Service providers:</strong> Shipping carriers, payment gateways (Stripe/PayPal), cloud hosting, and email platforms — under strict confidentiality agreements.</li>
+        <li><strong>Business transfers:</strong> In the event of a merger, acquisition, or bankruptcy, your data may be transferred as an asset.</li>
+        <li><strong>Legal authorities:</strong> If required by law, court order, or to protect the rights and safety of NeoGrid, our users, or the public.</li>
+      </ul>
+    </div>
+
+    <div class="privacy-section" id="data-security">
+      <h2>7. Data Security & Retention</h2>
+      <p>We implement industry-standard safeguards including SSL encryption, access controls, and regular security audits. While no system is 100% secure, we strive to protect your data from unauthorized access, alteration, or destruction. We retain your personal information only as long as necessary to fulfill the purposes outlined in this policy, typically:</p>
+      <ul>
+        <li>Account data: Retained until you request deletion, plus a limited period for legal obligations (e.g., tax records up to 7 years).</li>
+        <li>Transaction history: 7 years for financial compliance.</li>
+        <li>Marketing preferences: Until you opt out or unsubscribe.</li>
+      </ul>
+    </div>
+
+    <div class="privacy-section" id="your-rights">
+      <h2>8. Your Privacy Rights ("Orbit Control")</h2>
+      <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+      <ul>
+        <li><strong>Access:</strong> Request a copy of the data we hold about you.</li>
+        <li><strong>Rectification:</strong> Correct inaccurate or incomplete information.</li>
+        <li><strong>Erasure (Right to be forgotten):</strong> Request deletion of your personal data, subject to legal retention limits.</li>
+        <li><strong>Restriction & Portability:</strong> Limit processing or receive a machine-readable copy of your data.</li>
+        <li><strong>Opt-out of marketing:</strong> Unsubscribe from promotional emails via the "unsubscribe" link or account settings.</li>
+        <li><strong>Withdraw consent:</strong> For processing based solely on consent (e.g., cookies).</li>
+      </ul>
+      <p>To exercise any right, contact us at privacy@neogrid.market. We will respond within 30 days. If you are in the EU/EEA, you also have the right to lodge a complaint with your local data protection authority.</p>
+    </div>
+
+    <div class="privacy-section" id="children">
+      <h2>9. Children's Privacy</h2>
+      <p>NeoGrid Marketplace is not intended for individuals under the age of 16. We do not knowingly collect personal information from children. If we become aware of such data, we will delete it promptly. Parents or guardians may contact us to request removal.</p>
+    </div>
+
+    <div class="privacy-section" id="international">
+      <h2>10. International Data Transfers</h2>
+      <p>Our servers are located in the United States. If you access our platform from outside the US, your information may be transferred to, stored, and processed in the US. We ensure appropriate safeguards (e.g., Standard Contractual Clauses) are in place for data transfers from the EEA/UK. By using NeoGrid, you consent to such transfers.</p>
+    </div>
+
+    <div class="privacy-section" id="policy-changes">
+      <h2>11. Changes to this Privacy Policy</h2>
+      <p>We may update this policy to reflect changes in legal requirements, our data practices, or platform features. The "Last updated" date at the top of this page indicates when changes were made. Material changes will be notified via email or prominent website banner. Your continued use after updates constitutes acceptance of the revised policy.</p>
+    </div>
+
+    <div class="privacy-section" id="contact-details">
+      <h2>12. Contact Us</h2>
+      <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your data, please reach out to our Data Protection Orbits team:</p>
+      <p>✉️ <strong>Email:</strong> privacy@neogrid.market<br>
+      📬 <strong>Postal address:</strong> NeoGrid Privacy Office, 3100 Aether Lane, Suite 204, Wilmington, DE 19801, USA<br>
+      📞 <strong>Privacy hotline:</strong> +1 (302) 555-0198 (Mon-Fri, 9AM-5PM ET)</p>
+    </div>
+
+    <hr>
+
+    <div class="highlight-box" style="background: #e7f0ea; text-align: center;">
+      🔐 Your trust is our top priority. NeoGrid Marketplace is committed to transparent data practices and continuous improvement. For any privacy-related feedback, please contact us directly.
+    </div>
+    <p style="text-align: center; margin-top: 1rem; font-size: 0.85rem;">Last reviewed & compliant with GDPR, CCPA, and global privacy standards — "Radial Clarity" framework.</p>
+  </div>
+</main>
+
+<!-- STRATOS FOOTER (cohesive brand) -->
+<footer class="stratos-footer">
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4>NeoGrid Marketplace</h4>
+      <p>Conscious design for modern life</p>
+      <p>📍 Brooklyn, NY / Berlin</p>
+    </div>
+    <div class="footer-col">
+      
+  </div>
+  <div class="copyright">
+    © 2026 NeoGrid Marketplace — designed with intent. All concepts unique. | <a href="#" style="color:#bcd0c5; text-decoration: underline;">Privacy Policy</a>
+  </div>
+</footer>
+
+<!-- simple interaction script for back to home simulation & cart preview -->
+<script>
+  (function() {
+    // back button simulation: smooth demo navigation
+    const backLink = document.getElementById('backToHomeLink');
+    if (backLink) {
+      backLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        const toast = document.createElement('div');
+        toast.innerText = '↻ Returning to NeoGrid Homepage... (demo navigation)';
+        toast.style.position = 'fixed';
+        toast.style.bottom = '30px';
+        toast.style.left = '20px';
+        toast.style.backgroundColor = '#1e4a3b';
+        toast.style.color = 'white';
+        toast.style.padding = '10px 20px';
+        toast.style.borderRadius = '40px';
+        toast.style.fontSize = '0.85rem';
+        toast.style.fontWeight = '500';
+        toast.style.zIndex = '2000';
+        toast.style.boxShadow = '0 6px 16px rgba(0,0,0,0.1)';
+        document.body.appendChild(toast);
+        setTimeout(() => {
+          toast.style.opacity = '0';
+          setTimeout(() => toast.remove(), 300);
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }, 1200);
+      });
+    }
+    
+    // cart counter simulation (consistent with homepage and terms)
+    let cartCount = 0;
+    const cartNav = document.querySelector('.nav-icon');
+    if (cartNav) {
+      cartNav.addEventListener('click', (e) => {
+        e.preventDefault();
+        cartCount += 1;
+        cartNav.innerHTML = `🛒 Cart (${cartCount})`;
+        const miniToast = document.createElement('div');
+        miniToast.innerText = '🛍️ Demo: item added to bag (simulated from Privacy page)';
+        miniToast.style.position = 'fixed';
+        miniToast.style.bottom = '70px';
+        miniToast.style.right = '24px';
+        miniToast.style.backgroundColor = '#2d6a4f';
+        miniToast.style.color = 'white';
+        miniToast.style.padding = '8px 18px';
+        miniToast.style.borderRadius = '60px';
+        miniToast.style.fontSize = '0.8rem';
+        miniToast.style.zIndex = '1000';
+        document.body.appendChild(miniToast);
+        setTimeout(() => miniToast.remove(), 1800);
+      });
+    }
+
+    // optional: add a smooth scroll effect to sections if hash is present
+    if (window.location.hash) {
+      const element = document.querySelector(window.location.hash);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
+    }
+  })();
+</script>
+</body>
+</html>
